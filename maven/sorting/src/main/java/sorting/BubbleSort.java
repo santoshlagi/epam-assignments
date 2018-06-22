@@ -3,10 +3,10 @@ import java.util.Scanner;
 
 public class BubbleSort {
 	
-	void bubblesort(int arr[]){
-		int len=arr.length;
-		for(int i=0;i<len-1;i++){
-			for (int j = 0; j < len-i-1; j++){
+	public void bubblesort(int arr[]){ // sorting elements using bubble sort
+		int length=arr.length;
+		for(int i=0;i<length-1;i++){
+			for (int j = 0; j < length-i-1; j++){
 				
 				if(arr[i]>arr[i+1]){
 					int temp = arr[j];
@@ -20,24 +20,24 @@ public class BubbleSort {
 		
 	}
 	
-	public static void main(String args[])
+	public static void main(String args[]) // main method
     {
-		BubbleSort b=new BubbleSort();
-		Scanner s=new Scanner(System.in);
+		BubbleSort bubble=new BubbleSort();
+		private final Scanner scan=new Scanner(System.in);
 
-        System.out.println("enter mo of elements");
+        System.out.println("enter no of elements");
 
-        int n=s.nextInt();
+        int size=scan.nextInt();
 
-        int arr[]=new int[n];
+        int arr[]=new int[size];
 
         System.out.println("enter elements");
 
-        for(int i=0;i<n;i++){
-            arr[i]=s.nextInt();
+        for(int i=0;i<size;i++){
+            arr[i]=scan.nextInt();
         }
-		b.bubblesort(arr);
-		for(int i=0; i < n; i++){  
+		bubble.bubblesort(arr);
+		for(int i=0; i < size; i++){  
             
 			System.out.print(arr[i] + " ");  
         }  

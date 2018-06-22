@@ -1,17 +1,17 @@
 package quicksort;
 import java.util.Scanner;
 
-public class QuickSort{
-	 int partition(int arr[], int low, int high)
+public class QuickSort{ 
+	 public int partition(int arr[], int low, int high)// partition of elements method
     {
         int pivot = arr[high]; 
-        int i = (low-1);
+        int index = (low-1);
         for (int j=low; j<high; j++)
         {
         
             if (arr[j] <= pivot)
             {
-                i++;
+                index++;
  
                 int temp = arr[i];
                 arr[i] = arr[j];
@@ -26,33 +26,33 @@ public class QuickSort{
         return i+1;
     }
 	
-	  void quicksort(int arr[], int low, int high)
+	 public void quicksort(int arr[], int low, int high)// quicksort method
     {
         if (low < high)
         {
-            int p = partition(arr, low, high);
-            quicksort(arr, low, p-1);
-            quicksort(arr, p+1, high);
+            int  split= partition(arr, low, high);
+            quicksort(arr, low, split-1);
+            quicksort(arr, split+1, high);
         }
     }
-	public static void main(String... args){
+	public static void main(String... args){// main method
 		
-		QuickSort q=new QuickSort();
-		Scanner s=new Scanner(System.in);
+		QuickSort quick=new QuickSort();
+		private final Scanner scan=new Scanner(System.in);
 
-        System.out.println("enter mo of elements");
+        System.out.println("enter no of elements");
 
-        int n=s.nextInt();
+        int size=scan.nextInt();
 
-        int arr[]=new int[n];
+        int arr[]=new int[size];
 
         System.out.println("enter elements");
 
-        for(int i=0;i<n;i++){
-            arr[i]=s.nextInt();
+        for(int i=0;i<size;i++){
+            arr[i]=scan.nextInt();
         }
-		q.quicksort(arr,0,n-1);
-		for(int i=0; i < n; i++){  
+		quick.quicksort(arr,0,size-1);
+		for(int i=0; i < size; i++){  
             
 			System.out.print(arr[i] + " ");  
         }  
