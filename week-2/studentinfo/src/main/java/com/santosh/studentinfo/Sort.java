@@ -64,10 +64,8 @@ public class Sort {
 
     switch (choice) {
       case 1: Collections.sort(students, new Comparator<Object>() {
-            public int compare(final Object o1, final Object o2) {
-              Student obj1 = (Student) o1;
-              Student obj2 = (Student) o2;
-              return obj1.getId() - obj2.getId();
+            public int compare(Student o1,Student o2) {
+              return o1.getId() - o2.getId();
             }
       });
         for (Student student : students) {
@@ -75,10 +73,8 @@ public class Sort {
         }
              break;
       case 2: Collections.sort(students, new Comparator<Object>() {
-            public int compare(final Object o1, final Object o2) {
-              Student obj1 = (Student) o1;
-              Student obj2 = (Student) o2;
-              return obj2.getId() - obj1.getId();
+            public int compare(Student o1,Student o2) {
+              return o2.getId() - o1.getId();
             }
       });
         for (Student student : students) {
@@ -100,10 +96,8 @@ public class Sort {
 
     switch (choice) {
       case 1: Collections.sort(students, new Comparator<Object>() {
-            public int compare(final Object o1, final Object o2) {
-              Student obj1 = (Student) o1;
-              Student obj2 = (Student) o2;
-              return obj1.getFirstName().compareTo(obj2.getFirstName());
+            public int compare(Student o1,Student o2) {
+              return o1.getFirstName().compareTo(o2.getFirstName());
         }
       });
         for (Student student : students) {
@@ -111,10 +105,8 @@ public class Sort {
         }
               break;
       case 2: Collections.sort(students, new Comparator<Object>() {
-            public int compare(final Object o1, final Object o2) {
-              Student obj1 = (Student) o1;
-              Student obj2 = (Student) o2;
-              return obj2.getFirstName().compareTo(obj1.getFirstName());
+            public int compare(Student o1,Student o2) {         
+              return o2.getFirstName().compareTo(o1.getFirstName());
         }
       });
         for (Student student : students) {
@@ -138,10 +130,8 @@ public class Sort {
 
     switch (choice) {
       case 1: Collections.sort(students, new Comparator<Object>() {
-            public int compare(final Object o1, final Object o2) {
-              Student obj1 = (Student) o1;
-              Student obj2 = (Student) o2;
-              return obj1.getLastName().compareTo(obj2.getLastName());
+            public int compare(Student o1,Student o2) {
+              return o1.getLastName().compareTo(o2.getLastName());
         }
       });
         for (Student student : students) {
@@ -149,10 +139,8 @@ public class Sort {
         }
               break;
       case 2: Collections.sort(students, new Comparator<Object>() {
-            public int compare(final Object o1, final Object o2) {
-              Student obj1 = (Student) o1;
-              Student obj2 = (Student) o2;
-              return obj2.getLastName().compareTo(obj1.getLastName());
+            public int compare(Student o1,Student o2) {
+              return o2.getLastName().compareTo(o1.getLastName());
         }
       });
         for (Student student : students) {
@@ -175,10 +163,8 @@ public class Sort {
 
     switch (choice) {
       case 1: Collections.sort(students, new Comparator<Object>() {
-            public int compare(final Object o1, final Object o2) {
-              Student obj1 = (Student) o1;
-              Student obj2 = (Student) o2;
-              return obj1.getDept().compareTo(obj2.getDept());
+            public int compare(Student o1,Student o2) {
+              return o1.getDept().compareTo(o2.getDept());
         }
       });
         for (Student student : students) {
@@ -186,10 +172,8 @@ public class Sort {
         }
                break;
       case 2: Collections.sort(students, new Comparator<Object>() {
-            public int compare(final Object o1, final Object o2) {
-              Student obj1 = (Student) o1;
-              Student obj2 = (Student) o2;
-              return obj2.getDept().compareTo(obj1.getDept());
+            public int compare(Student o1,Student o2) {
+              return o2.getDept().compareTo(o1.getDept());
         }
         });
         for (Student student : students) {
@@ -211,10 +195,8 @@ public class Sort {
 
     switch (choice) {
       case 1: Collections.sort(students, new Comparator<Object>() {
-        public int compare(final Object o1, final Object o2) {
-          Student obj1 = (Student) o1;
-          Student obj2 = (Student) o2;
-          return obj1.getYear() - obj2.getYear();
+        public int compare(Student o1,Student o2) {
+          return o1.getYear() - o2.getYear();
         }
         });
         for (Student student : students) {
@@ -222,10 +204,8 @@ public class Sort {
         }
               break;
       case 2: Collections.sort(students, new Comparator<Object>() {
-          public int compare(final Object o1, final Object o2) {
-            Student obj1 = (Student) o1;
-            Student obj2 = (Student) o2;
-            return obj2.getYear() - obj1.getYear();
+          public int compare(Student o1,Student o2) {
+            return o2.getYear() - o1.getYear();
         }
         });
         for (Student student : students) {
